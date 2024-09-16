@@ -89,18 +89,18 @@ The function should print the details of these keyword arguments as "property: v
 
 
 
-# books = [
-#     ("The Alchemist", "Fiction", 1988, 250),
-#     ("The Da Vinci Code", "Mystery", 2003, 300),
-#     ("A Brief History of Time", "Science", 1988, 150),
-#     ("The Theory of Everything", "Science", 2002, 100),
-#     ("Pride and Prejudice", "Fiction", 1813, 200),
-#     ("To Kill a Mockingbird", "Fiction", 1960, 180),
-#     ("The Catcher in the Rye", "Fiction", 1951, 220),
-#     ("Angels & Demons", "Mystery", 2000, 210),
-#     ("The Grand Design", "Science", 2010, 90),
-#     ("1984", "Fiction", 1949, 190)
-# ]
+books = [
+    ("The Alchemist", "Fiction", 1988, 250),
+    ("The Da Vinci Code", "Mystery", 2003, 300),
+    ("A Brief History of Time", "Science", 1988, 150),
+    ("The Theory of Everything", "Science", 2002, 100),
+    ("Pride and Prejudice", "Fiction", 1813, 200),
+    ("To Kill a Mockingbird", "Fiction", 1960, 180),
+    ("The Catcher in the Rye", "Fiction", 1951, 220),
+    ("Angels & Demons", "Mystery", 2000, 210),
+    ("The Grand Design", "Science", 2010, 90),
+    ("1984", "Fiction", 1949, 190)
+]
 
 
  """  **Task 01**: Create a Book Filtering Function
@@ -110,12 +110,12 @@ Given the list books as shown below, write a Python function named `filter_books
 - Example usage : `print(filter_books("Fiction", 1980))`
 - Expected output: `['The Alchemist', 'The Catcher in the Rye']` """
 
-# def filter_book():
-#     list3 = [name for name, genre, year, amount in books if genre == "Fiction" and year > 1950]
-#     return list3
+def filter_book(_genre, _year):
+    list3 = [name for name, genre, year, amount in books if genre == _genre and year >= _year]
+    return list3
 
-# list4 = filter_book()
-# print(list4)
+list4 = filter_book("Fiction",1920)
+print(list4)
 
 
 
@@ -155,56 +155,56 @@ Call `write_to_file` to write "Hello, Python!" to a file named "greetings.txt", 
 
 
 #OOP
-from abc import ABC, abstractmethod
+# from abc import ABC, abstractmethod
 
-class Vehicle(ABC):
-    def __init__(self, vehicle_id, brand, rental_price):
-        self._vehicle_id = vehicle_id
-        self._brand = brand
-        self._rental_price = rental_price
+# class Vehicle(ABC):
+#     def __init__(self, vehicle_id, brand, rental_price):
+#         self._vehicle_id = vehicle_id
+#         self._brand = brand
+#         self._rental_price = rental_price
 
-    def get_brand(self):
-        return self._brand
+#     def get_brand(self):
+#         return self._brand
 
-    def get_id(self):
-        return self._vehicle_id
+#     def get_id(self):
+#         return self._vehicle_id
 
-    def get_price(self):
-        return self._rental_price
+#     def get_price(self):
+#         return self._rental_price
 
-    def total_rental_cost(self, rental_days):
-        total_cost = self._rental_price * rental_days
-        return total_cost
+#     def total_rental_cost(self, rental_days):
+#         total_cost = self._rental_price * rental_days
+#         return total_cost
 
-    @abstractmethod
-    def display_details(self):
-        pass
+#     @abstractmethod
+#     def display_details(self):
+#         pass
 
 
-class Car(Vehicle):
-    def __init__(self, brand, vehicle_id, rental_price, num_of_seats):
-        super().__init__(vehicle_id, brand, rental_price)
-        self._num_of_seats = num_of_seats
+# class Car(Vehicle):
+#     def __init__(self, brand, vehicle_id, rental_price, num_of_seats):
+#         super().__init__(vehicle_id, brand, rental_price)
+#         self._num_of_seats = num_of_seats
 
-    def set_num_of_seats(self, num_of_seats):
-        self._num_of_seats = num_of_seats
+#     def set_num_of_seats(self, num_of_seats):
+#         self._num_of_seats = num_of_seats
 
-    def get_num_of_seats(self):
-        return self._num_of_seats
+#     def get_num_of_seats(self):
+#         return self._num_of_seats
 
-    def display_details(self):
-        print(f"Brand of vehicle is {self.get_brand()}")
-        print(f"Vehicle ID is {self.get_id()}")
-        print(f"Rental price per day is {self.get_price()}")
-        print(f"Number of seats is {self.get_num_of_seats()}")
+#     def display_details(self):
+#         print(f"Brand of vehicle is {self.get_brand()}")
+#         print(f"Vehicle ID is {self.get_id()}")
+#         print(f"Rental price per day is {self.get_price()}")
+#         print(f"Number of seats is {self.get_num_of_seats()}")
 
  
-car = Car("Mercedes", "DEF123", 100, 8)
+# car = Car("Mercedes", "DEF123", 100, 8)
  
-car.display_details()
+# car.display_details()
 
-total_rent = car.total_rental_cost(10)
-print(f"Total rent is {total_rent}")
+# total_rent = car.total_rental_cost(10)
+# print(f"Total rent is {total_rent}")
 
 
 
