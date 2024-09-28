@@ -1,55 +1,83 @@
-# books = [ 
-#     ("The Alchemist", 25),
-#     ("The Da Vinci Code", 30),
-#     ("A Brief History of Time", 15),
-#     ("Angels & Demons", 0),
-#     ("The Grand Design", 0),
-#     ("1984", 19)
-# ]
+# def my_decorator(func):
+#     def wrapper():
+#         print("Before execution")
+#         func()
+#         print("After execution")
+#     return wrapper
+
+
+# @my_decorator
+# def say_hello():
+#     print("Hello, world!")
+
+# say_hello()
+
+
+# def validate_email(func):
+#     def wrapper(user_email):
+#         if useremail.endswith("@gmail.com"):
+#             func(user_email)
+#         else:
+#             print("You're not vrit member")
+
+#     return wrapper
+
+#   
+
+# get_data("akushal.177@gmail.com")
 
 
 
 
 
-# class Library :
-#     st_count = 0
 
 
-#     def __init__(self,st_name, dept = "CS"):
-#         self.st_name = st_name
-#         self.dept = dept
-#         Library.st_count += 1
-        
-
-#     def book_lend(self,book_name):
-#        print(list3)
-
-#     @classmethod
-#     def get_student_count(cls):
-#         return cls.st_count
-
-# lib1 = Library("Nabin")   
-# print(lib1.st_name) 
 
 
-# lib1.book_lend("1984")
+
+
+# import time
+# def time_taken(func):
     
+#     def wrapper(email):
+#         start_time = time.time()
 
+#         if email.endswith("@gmail.com"):
+#                 time.sleep(1.5)
+#                 func(email)
+#         else:
+#             time.sleep(1.5)
+#             print("You're not vrit member")
 
+#         end_time = time.time()
+#         execution_time = end_time - start_time
+#         print(execution_time)
+#     return wrapper
+# @time_taken
+# def get_time(email):
+#     print("Accesing database")
 
- 
-
-
-
-
-
-
-
-
-
+# get_time("akushal.177@gmail.com")
         
-        
 
+
+# class Point:
+#     def __init__(self,x,y):
+#         self.x = x
+#         self.y = y
+
+#     def __str__(self):
+#         return(f"({self.x},{self.y})")
+
+#     def __add__(self,other):
+#      x = self.x + other.x
+#      y = self.y + other.y
+#      return Point(x,y)
+
+# p1 = Point(5,6)
+# p2 = Point(6,7)
+# print(p1 + p2)
+    
 
 
 
